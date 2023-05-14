@@ -33,7 +33,6 @@ public class PricingControllerTests {
     @BeforeEach
     public void setUp() {
         this.price = new Price("USD", new BigDecimal(22000), 1L);
-        // when(pricingService.getPrice(-1L)).thenThrow(new PriceException("Unable to get price for vehicled id -1"));
     }
 
     @Test

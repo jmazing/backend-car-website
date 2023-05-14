@@ -7,10 +7,15 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * Implements a mock repository for generating a random address.
  */
 @Repository
+@Data
+@NoArgsConstructor
 public class MockAddressRepository {
 
     /**

@@ -6,12 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/maps")
+@RequiredArgsConstructor
 public class MapsController {
 
     @Autowired
-    MockAddressRepository mockAddressRepository;
+    private final MockAddressRepository mockAddressRepository;
 
     @GetMapping
     public Address get(@RequestParam Double lat, @RequestParam Double lon) {
