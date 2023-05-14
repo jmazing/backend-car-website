@@ -2,8 +2,14 @@ package com.udacity.vehicles.domain;
 
 import javax.validation.constraints.NotNull;
 
+import com.udacity.vehicles.client.maps.Address;
+
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Stores information about a given location.
@@ -12,6 +18,9 @@ import jakarta.persistence.Transient;
  * the maps API.
  */
 @Embeddable
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Location {
 
     @NotNull
@@ -21,62 +30,11 @@ public class Location {
     private Double lon;
 
     @Transient
-    private String address;
-
-    @Transient
-    private String city;
-
-    @Transient
-    private String state;
-
-    @Transient
-    private String zip;
-
-    public Location() {
-    }
+    @Embedded
+    private Address address;
 
     public Location(Double lat, Double lon) {
         this.lat = lat;
         this.lon = lon;
-    }
-
-    public Double getLat() {
-        return lat;
-    }
-
-    public Double getLon() {
-        return lon;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getZip() {
-        return zip;
-    }
-
-    public void setZip(String zip) {
-        this.zip = zip;
     }
 }

@@ -83,7 +83,7 @@ the Vehicle information to be presented
 
 ```json
 {
-   "condition":"USED",
+   "condition":"NEW",
    "details":{
       "body":"sedan",
       "model":"Impala",
@@ -92,12 +92,12 @@ the Vehicle information to be presented
          "name":"Chevrolet"
       },
       "numberOfDoors":4,
-      "fuelType":"Gasoline",
+      "fuelType":"Electric",
       "engine":"3.6L V6",
       "mileage":32280,
       "modelYear":2018,
-      "productionYear":2018,
-      "externalColor":"white"
+      "productionYear":2023,
+      "externalColor":"RED"
    },
    "location":{
       "lat":40.73061,
