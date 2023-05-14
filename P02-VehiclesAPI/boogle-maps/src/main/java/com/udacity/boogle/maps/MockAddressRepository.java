@@ -5,16 +5,19 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * Implements a mock repository for generating a random address.
  */
-class MockAddressRepository {
+@Repository
+public class MockAddressRepository {
 
     /**
      * Gets a random address from the list.
      * @return A new, random address split into street, city, state and zip
      */
-    static Address getRandomAddress() {
+    public Address getRandomAddress() {
 
         Random generator = new Random();
         int randomIndex = generator.nextInt(ADDRESSES.length);
@@ -41,7 +44,7 @@ class MockAddressRepository {
     /**
      * An array of random addresses for use in getRandom()
      */
-    private static final String[] ADDRESSES = {
+    private final String[] ADDRESSES = {
             "777 Brockton Avenue, Abington MA 2351",
             "30 Memorial Drive, Avon MA 2322",
             "250 Hartford Avenue, Bellingham MA 2019",

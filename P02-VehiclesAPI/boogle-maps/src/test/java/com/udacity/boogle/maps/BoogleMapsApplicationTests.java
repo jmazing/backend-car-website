@@ -1,14 +1,19 @@
 package com.udacity.boogle.maps;
 
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class BoogleMapsApplicationTests {
 
-	@Test
-	public void contextLoads() {
+	private MockAddressRepository mockAddressRepository;
+
+	@BeforeEach
+	public void setUp() {
+		mockAddressRepository = new MockAddressRepository();
+		
 	}
 
 }

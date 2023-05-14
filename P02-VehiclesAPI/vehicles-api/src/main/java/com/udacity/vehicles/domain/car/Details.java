@@ -1,12 +1,11 @@
 package com.udacity.vehicles.domain.car;
 
-import javax.validation.constraints.NotNull;
-
 import com.udacity.vehicles.domain.manufacturer.Manufacturer;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,12 +1,11 @@
 package com.udacity.vehicles.domain;
 
-import javax.validation.constraints.NotNull;
-
 import com.udacity.vehicles.client.maps.Address;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Transient;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

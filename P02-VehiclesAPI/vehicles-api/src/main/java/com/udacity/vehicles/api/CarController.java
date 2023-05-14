@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import javax.validation.Valid;
-
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -27,6 +25,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.udacity.vehicles.domain.car.Car;
 import com.udacity.vehicles.service.CarService;
+
+import jakarta.validation.Valid;
 
 /**
  * Implements a REST-based controller for the Vehicles API.
