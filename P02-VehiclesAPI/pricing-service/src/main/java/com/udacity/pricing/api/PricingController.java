@@ -12,15 +12,18 @@ import com.udacity.pricing.domain.price.Price;
 import com.udacity.pricing.service.PriceException;
 import com.udacity.pricing.service.PricingService;
 
+import lombok.RequiredArgsConstructor;
+
 /**
  * Implements a REST-based controller for the pricing service.
  */
 @RestController
 @RequestMapping("/services/price")
+@RequiredArgsConstructor
 public class PricingController {
 
     @Autowired
-    private PricingService pricingService;
+    private final PricingService pricingService;
 
     /**
      * Gets the price for a requested vehicle.

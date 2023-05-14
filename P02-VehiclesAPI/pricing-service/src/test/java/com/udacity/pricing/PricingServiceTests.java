@@ -14,7 +14,7 @@ import com.udacity.pricing.service.PriceException;
 import com.udacity.pricing.service.PricingService;
 
 
-public class PricingServiceApplicationTests {
+public class PricingServiceTests {
 
 	private PricingService pricingService;
 
@@ -36,7 +36,6 @@ public class PricingServiceApplicationTests {
 		assertThrows(PriceException.class, () -> {
 			pricingService.getPrice(-1L);
 		});
-
 	}
 
 }
